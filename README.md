@@ -72,5 +72,20 @@ Pure HTML/CSS project, use lots of **Grid**
 
 `background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url(../img/back.jpg);`
 
+### 讓圖片能夠剛好填滿整個容器
+
+可以先把 `<img />` 放到一個 `<figure />` 裡面
+
+`<figure class="gallery__item gallery__item--1"><img src="img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img"></figure>`
+
+然後利用 `object-fit` 就可以讓圖片剛好填滿
+
+```CSS
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+```
+
 ### 棒棒的連結
 + 直接用 GUI 拉 GRID https://grid.layoutit.com/
