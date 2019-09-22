@@ -37,12 +37,12 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 0.8rem [sidebar-end full-start] minmax(.6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 1.4rem) [col-end]) [center-end] minmax(.6rem, 1fr) [full-end];
 
-  
+  font-size: 0.1rem;
 
   //TEST 
   
   & > * {
-    padding: 40px;
-    font-size: 0.4rem;
+    // padding: 40px;
+    // font-size: 0.4rem;
   }
 }

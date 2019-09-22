@@ -18,5 +18,53 @@ Pure HTML/CSS project, use lots of **Grid**
 
 其中有兩個 `1fr` 是為了讓主要的八格可以置中，並且如果想要用全寬的 layout 的時候可以只用這左右兩個來達成。
 
+### Emmet 生成多個 html tag 並且有初始值
+`feature{feature $}*6`
+
+會長出個這個東西
+
+```HTML
+<div class="feature">feature 1</div>
+<div class="feature">feature 2</div>
+<div class="feature">feature 3</div>
+<div class="feature">feature 4</div>
+<div class="feature">feature 5</div>
+<div class="feature">feature 6</div>
+```
+
+### 不要重複的寫一樣的 CSS - selector 
+
+```CSS
+%heading {
+  font-family: $font-display;
+  font-weight: 400;
+}
+
+.heading-1 {
+  @extend %heading;
+}
+
+.heading-2 {
+  @extend %heading;
+}
+
+.heading-3 {
+  @extend %heading;
+}
+
+.heading-4 {
+  @extend %heading;
+}
+```
+
+### 直接用 Grid 做 Responsive
+
+在 features 裡面有六個 feature，如果想要讓 feature 自動換行，可以這樣寫
+
+`grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));`
+
+`auto-fit`： 依照我們訂的大小，自動判斷可以放幾個 track
+`minmax(2.5rem, 1fr)`： 每一個 track 至少要有 250px，並且超過 250px 的時候就會平分寬度，例如 width = 800，那麼每一行就會有三個 track，每個 track 的寬度就是 (800 - 2 * grid-column-gap) / 3
+
 ### 棒棒的連結
 + 直接用 GUI 拉 GRID https://grid.layoutit.com/
