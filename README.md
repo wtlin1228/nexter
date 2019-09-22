@@ -66,5 +66,11 @@ Pure HTML/CSS project, use lots of **Grid**
 `auto-fit`： 依照我們訂的大小，自動判斷可以放幾個 track
 `minmax(2.5rem, 1fr)`： 每一個 track 至少要有 250px，並且超過 250px 的時候就會平分寬度，例如 width = 800，那麼每一行就會有三個 track，每個 track 的寬度就是 (800 - 2 * grid-column-gap) / 3
 
+### 想要在圖片上面加一層東西可以這樣
+
+利用 `background-image` 可以接受多個參數來達成
+
+`background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url(../img/back.jpg);`
+
 ### 棒棒的連結
 + 直接用 GUI 拉 GRID https://grid.layoutit.com/
